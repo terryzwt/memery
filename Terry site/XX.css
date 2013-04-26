@@ -1,0 +1,145 @@
+	body {
+		text-align:center;
+		background-image:url('bgpic.jpg');
+		position:relative;
+		text-align:center;
+		}
+
+	#container {
+		position:relative;
+		width:888px;
+		height:auto;
+		padding:0;
+		margin-left:-427px;
+		left:50%;
+		text-align:center;
+		float:left;
+	}
+	#content {
+		position:relative;
+		margin-top:0px;
+		width:853px;
+		height:auto;
+		float:left;
+
+	}
+	#header {
+		background-image:url('images/back.jpg');
+		background-repeat:no-repeat;
+		width:853px;
+		height:110px;
+		float:left;
+		border-bottom:2px purple double;
+	}
+
+	#menu {
+		background-color:#3399FF;
+		font-size:large;
+		width:850px;
+		height:20px;
+	}
+	
+	#menu ul{
+	background-color:#3399FF;
+	}
+	
+	#menu ul li{
+	list-style:none;
+	float:left;
+	width:auto;
+	padding:3px;
+	padding:3px 20px;
+	border-left-style:solid;
+	border-left-width:3px;
+	border-left-color:green;
+	}
+	
+	#left {
+		width:170px;
+		height:400px;
+		float:left;
+		margin-left:20px;
+	}
+	
+	#left ul {
+		float:left;
+		text-align:left
+	}
+	
+	#left ul li {
+		list-style:none;
+		background-image:url('cha.jpg');
+		background-repeat:no-repeat;
+		border-left-style:solid;
+		border-left-color:fuchsia;
+		border-left-width:0px;
+		
+		border-right-style:solid;
+		border-right-width:0px;
+		border-right-color:navy;
+		
+		border-bottom-style:solid;
+		border-bottom-width:1px;
+		border-bottom-color:gray;
+		padding-left:5px;
+		height:auto;
+		padding:10px 2px;
+	}
+
+	#left li a {
+	font-family:"Arial Unicode MS"
+	}
+	#left li a:hover {
+	 color:lime;
+	 text-decoration:underline;
+	 background-color:aqua;
+	}
+ 
+ 	.imgsh {
+ 	
+		background:#FFFFFF;
+		border:1px solid #CCCCCC;
+	 	display:table-cell;
+	   	height:120px; 
+	   	width:120px;
+	    text-align:center;
+	    
+	    vertical-align:middle;
+	    >display: block;
+	    >font-size: 91px;
+	    >font-family:Arial;	
+       }
+	
+	.imgcon {
+	width:130px;
+	height:180px;
+	display:table-cell;
+	float:left;
+	text-align:center;
+	border:0px red solid;
+	margin:10px 15px;
+	}
+	
+	#main {
+		float:left;
+		width:550px;
+		height:auto;
+		padding:0;
+		margin-left:50px;
+		margin-top:40px;
+		position:relative;
+	}
+		
+	#footer {
+	position:relative;
+	clear:both;
+	width:850px;
+	height:20px;
+	border-style:none;
+	border-top:1px navy double;
+	margin:0 auto;
+}
+
+
+
+

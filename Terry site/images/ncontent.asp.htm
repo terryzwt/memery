@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<title>海博创天-网站营销专家-网站建设</title>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312"><link
+ href="ncontent.asp_files/css.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+.invisible {
+	FILTER: alpha(opacity=0)
+}
+.px12w {	font-size: 12px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+.style2 {	font-size: 14px;
+	color: #000000;
+}
+</style>
+<script language="JavaScript1.2">
+<!--
+function high(which2){
+theobject=which2
+highlighting=setInterval("highlightit(theobject)",50)
+}
+function low(which2){
+clearInterval(highlighting)
+which2.filters.alpha.opacity=0
+}
+function highlightit(cur2){
+if (cur2.filters.alpha.opacity<100)
+cur2.filters.alpha.opacity+=10
+else if (window.highlighting)
+clearInterval(highlighting)
+}
+//-->
+</script>
+
+<script language="JavaScript">
+ var h;
+ var w;
+ var l;
+ var t;
+ var topMar = 0;
+ var leftMar = 0;
+ var space = 2;
+ var isvisible;
+ var MENU_SHADOW_COLOR='#FFFFFF';
+ var global = window.document
+ global.fo_currentMenu = null
+ global.fo_shadows = new Array
+
+function HideMenu() 
+{
+ var mX;
+ var mY;
+ var vDiv;
+ var mDiv;
+	if (isvisible == true)
+{
+		vDiv = document.all("menuDiv");
+		mX = window.event.clientX + document.body.scrollLeft;
+		mY = window.event.clientY + document.body.scrollTop;
+		if ((mX < parseInt(vDiv.style.left)) || (mX > parseInt(vDiv.style.left)+vDiv.offsetWidth) || (mY < parseInt(vDiv.style.top)-h) || (mY > parseInt(vDiv.style.top)+vDiv.offsetHeight)){
+			vDiv.style.visibility = "hidden";
+			isvisible = false;
+		}
+}
+}
+
+function ShowMenu(vMnuCode,tWidth) {
+	vSrc = window.event.srcElement;
+	vMnuCode = "<table id='submenu' cellspacing=0 cellpadding=0 style='width:"+tWidth+"' class=tableborder1 onmouseout='HideMenu()'><tr height=><td nowrap align=left class=table height=20>" + vMnuCode + "</td></tr></table>";
+
+	h = vSrc.offsetHeight;
+	w = vSrc.offsetWidth;
+	l = vSrc.offsetLeft + leftMar+4;
+	t = vSrc.offsetTop + topMar + h + space-2;
+	vParent = vSrc.offsetParent;
+	while (vParent.tagName.toUpperCase() != "BODY")
+	{
+		l += vParent.offsetLeft;
+		t += vParent.offsetTop;
+		vParent = vParent.offsetParent;
+	}
+
+	menuDiv.innerHTML = vMnuCode;
+	menuDiv.style.top = t;
+	menuDiv.style.left = l;
+	menuDiv.style.visibility = "visible";
+	isvisible = true;
+    makeRectangularDropShadow(submenu, MENU_SHADOW_COLOR, 4)
+}
+
+function makeRectangularDropShadow(el, color, size)
+{
+	var i;
+	for (i=size; i>0; i--)
+	{
+		var rect = document.createElement('div');
+		var rs = rect.style
+		rs.position = 'absolute';
+		rs.left = (el.style.posLeft + i) + 'px';
+		rs.top = (el.style.posTop + i) + 'px';
+		rs.width = el.offsetWidth + 'px';
+		rs.height = el.offsetHeight + 'px';
+		rs.zIndex = el.style.zIndex - i;
+		rs.backgroundColor = color;
+		var opacity = 1 - i / (i + 1);
+		rs.filter = 'alpha(opacity=' + (100 * opacity) + ')';
+		el.insertAdjacentElement('afterEnd', rect);
+		global.fo_shadows[global.fo_shadows.length] = rect;
+	}
+}
+var about= '&nbsp;<a class=table href=\"website.htm\"><font color="#000000">定制建站</font></a>&nbsp;&nbsp;<a  href=\"qplan.htm\" class=table><font color="#000000">智能建站</font></a>&nbsp;&nbsp;<a class=table href=\"shop.htm\"><font color="#000000">购物系统</font></a>&nbsp;&nbsp;<a class=table href=\"domain_host.htm\"><font color="#000000">域名虚机</font></a>'
+var seo= '&nbsp;<a class=table href=\"seo_knoledge.asp\"><font color="#000000">优化知识</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a  href=\"seo_custor.htm\" class=table><font color="#000000">优化案例</font></a>&nbsp;&nbsp;'
+var product= '<a class=table href=\"google.htm\"><font color="#000000">GOOGLE竞价</font></a>&nbsp;&nbsp;<a  href=\"baidu.htm\" class=table><font color="#000000">百度推广</font></a>&nbsp;&nbsp;<a class=table href=\"huicong.htm\"><font color="#000000">慧聪推广</font></a>&nbsp;&nbsp;<a class=table href=\"other_search.htm\"><font color="#000000">其他推广</font></a>&nbsp;&nbsp;&nbsp;'
+var sell= '&nbsp;&nbsp;&nbsp;<a class=table href=\"flash.htm\"><font color="#000000">FLASH</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a  href=\"kejian.htm\" class=table><font color="#000000">课件制作</font></a>&nbsp;&nbsp;'
+var news= '&nbsp;&nbsp;&nbsp;<a class=table href=\"notice.asp\"><font color="#000000">公司动态</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<a  href=\"news.asp\" class=table><font color="#000000">行业资讯</font></a>&nbsp;&nbsp;'
+var server= '<a class=table href=\"server.html\"><font color="#000000">服务体系</font></a>&nbsp;&nbsp;<a  href=\"faq.asp\" class=table><font color="#000000">FAQ</font></a>&nbsp;&nbsp;<a class=table href=\"payment.html\"><font color="#000000">汇款方式</font></a>&nbsp;&nbsp;'
+</script>
+<meta content="MSHTML 6.00.2900.2995" name="GENERATOR"><script language="JavaScript">
+var currentpos,timer;
+
+function initialize()
+{
+timer=setInterval("scrollwindow()",50);
+}
+function sc(){
+clearInterval(timer);
+}
+function scrollwindow()
+{
+currentpos=document.body.scrollTop;
+window.scroll(0,++currentpos);
+if (currentpos != document.body.scrollTop)
+sc();
+}
+document.onmousedown=sc
+document.ondblclick=initialize
+</script>
+
+</head><body onmousemove="HideMenu()" bottommargin="0" leftmargin="0" 
+topmargin="0" rightmargin="0" marginheight="0" marginwidth="0" 
+background="ncontent.asp_files/bg.gif">
+<div id="menuDiv" style="z-index: 1; visibility: hidden; width: 1px; 
+position: absolute; height: 1px; background-color: rgb(255, 255, 255);"></div>
+<table class="top" border="0" cellpadding="0" cellspacing="0" 
+height="66" width="1004">
+  <tbody>
+  <tr>
+    <td rowspan="3" width="9">&nbsp;</td>
+    <td rowspan="3" width="20">&nbsp;</td>
+    <td rowspan="3" valign="bottom" width="122"><a 
+href="http://www.webeijing.cn/"><img 
+src="ncontent.asp_files/eweb_08.jpg" alt="海博创天 网站建设 网站优化" border="0" 
+height="51" width="122"></a></td>
+    <td rowspan="3" width="27">&nbsp;</td>
+    <td height="22" width="566"><a name="top"></a></td>
+    <td align="middle" bgcolor="#f0f1f2" width="259"><a 
+href="http://www.webeijing.cn/index.html" class="top">首 页</a> | <a 
+href="http://www.webeijing.cn/sitemap.html" class="top">网站地图</a> | <a 
+href="http://www.webeijing.cn/link.html" class="top">友情链接</a> | <a 
+href="http://www.webeijing.cn/contact.html" class="top">联系我们</a> </td>
+  </tr>
+  <tr>
+    <td colspan="2" height="13"></td></tr>
+  <tr>
+    <td colspan="2" height="31">
+      <table class="table" border="0" cellpadding="0" cellspacing="0" 
+height="31" width="825">
+        <tbody>
+        <tr>
+          <td background="ncontent.asp_files/eweb_10.jpg" width="154"><a
+ onmouseover="ShowMenu(about)" 
+href="http://www.webeijing.cn/website.htm" target="_top"><img 
+class="invisible" onmouseover="high(this)" onmouseout="low(this)" 
+alt="网站建设" src="ncontent.asp_files/ewebc_10.jpg" border="0" height="31" 
+width="154"></a></td>
+          <td width="1"><img alt="" src="ncontent.asp_files/eweb_11.jpg"
+ height="31" width="1"></td>
+          <td background="ncontent.asp_files/eweb_12.jpg" width="129"><a
+ onmouseover="ShowMenu(seo)" 
+href="http://www.webeijing.cn/seo_knoledge.asp" target="_top"><img 
+class="invisible" onmouseover="high(this)" onmouseout="low(this)" 
+alt="网站优化" src="ncontent.asp_files/ewebc_12.jpg" border="0" height="31" 
+width="129"></a></td>
+          <td width="1"><img alt="" src="ncontent.asp_files/eweb_11.jpg"
+ height="31" width="1"></td>
+          <td background="ncontent.asp_files/eweb_14.jpg" width="129"><a
+ onmouseover="ShowMenu(product)" 
+href="http://www.webeijing.cn/google.htm" target="_top"><img 
+class="invisible" onmouseover="high(this)" onmouseout="low(this)" 
+alt="网站推广" src="ncontent.asp_files/ewebc_14.jpg" border="0" height="31" 
+width="129"></a></td>
+          <td width="1"><img alt="" src="ncontent.asp_files/eweb_11.jpg"
+ height="31" width="1"></td>
+          <td background="ncontent.asp_files/eweb_16.jpg" width="129"><a
+ onmouseover="ShowMenu(sell)" href="http://www.webeijing.cn/flash.htm" 
+target="_top"><img class="invisible" onmouseover="high(this)" 
+onmouseout="low(this)" alt="多媒体服务" src="ncontent.asp_files/ewebc_16.jpg"
+ border="0" height="31" width="129"></a></td>
+          <td width="1"><img alt="" src="ncontent.asp_files/eweb_17.jpg"
+ height="31" width="1"></td>
+          <td background="ncontent.asp_files/eweb_18.jpg" valign="top" 
+width="129"><a onmouseover="ShowMenu(news)" 
+href="http://www.webeijing.cn/notice.asp" target="_top"><img 
+class="invisible" onmouseover="high(this)" onmouseout="low(this)" 
+alt="资讯动态" src="ncontent.asp_files/ewebc_18.jpg" border="0" height="31" 
+width="129"></a></td>
+          <td width="1"><img alt="" src="ncontent.asp_files/eweb_19.jpg"
+ height="31" width="1"></td>
+          <td background="ncontent.asp_files/eweb_20.jpg" width="150"><a
+ onmouseover="ShowMenu(server)" 
+href="http://www.webeijing.cn/server.html" target="_top"><img 
+class="invisible" onmouseover="high(this)" onmouseout="low(this)" 
+alt="客户服务" src="ncontent.asp_files/ewebc_20.jpg" border="0" height="31" 
+width="150"></a></td>
+        </tr></tbody></table></td></tr></tbody></table>
+<table class="table" border="0" cellpadding="0" cellspacing="0" 
+width="1004">
+  <tbody>
+  <tr>
+<td height="25">&nbsp;</td>
+  </tr></tbody></table>
+<table class="table" border="0" cellpadding="0" cellspacing="0" 
+width="1004">
+  <tbody>
+  <tr>
+    <td width="9">&nbsp;</td>
+    <td width="20">&nbsp;</td>
+    <td background="ncontent.asp_files/newsbg.jpg" height="144" 
+width="974"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ 
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+ height="144" width="954">
+      <param name="movie" value="images/news_top.swf">
+      <param name="quality" value="high">
+      <param name="wmode" value="transparent">
+      <embed src="ncontent.asp_files/news_top.swf" quality="high" 
+pluginspage="http://www.macromedia.com/go/getflashplayer" 
+type="application/x-shockwave-flash" wmode="transparent" height="144" 
+width="954">
+    </object></td>
+  </tr></tbody></table>
+<table class="table" border="0" cellpadding="0" cellspacing="0" 
+width="1004">
+  <tbody>
+  <tr><td height="10"></td></tr></tbody></table>
+<table class="table" border="0" cellpadding="0" cellspacing="0" 
+width="1004">
+  <tbody>
+  <tr>
+    <td width="9">&nbsp;</td>
+    <td width="20">&nbsp;</td>
+    <td valign="top" width="189">
+      <table class="table" border="0" cellpadding="0" cellspacing="0" 
+width="189">
+        <tbody>
+        <tr>
+          <td height="35"><img alt="" src="ncontent.asp_files/news.jpg" 
+height="35" width="189"></td>
+        </tr>
+        <tr>
+          <td align="center" background="ncontent.asp_files/eweb_36.jpg"
+ height="296" valign="top"><table class="bottom" 
+background="ncontent.asp_files/sortbg.gif" border="0" cellpadding="0" 
+cellspacing="0" width="165">
+            <tbody><tr>
+              <td align="center" height="31" width="30">&nbsp;</td>
+              <td align="left" width="135"><a 
+href="http://www.webeijing.cn/notice.asp" class="bottom">公司动态</a></td>
+            </tr>
+            <tr>
+              <td align="center" height="31">&nbsp;</td>
+              <td align="left"><a 
+href="http://www.webeijing.cn/news.asp" class="bottom">行业资讯</a></td>
+            </tr>
+          </tbody></table>            </td>
+        </tr>
+        <tr>
+          <td height="9"><img alt="" 
+src="ncontent.asp_files/eweb_48.jpg" height="9" width="189"></td></tr></tbody></table></td>
+    <td width="8">&nbsp;</td>
+    <td valign="top" width="760"><table class="top" border="0" 
+cellpadding="0" cellspacing="0" width="760">
+      <tbody><tr>
+        <td align="right" height="33"><a 
+href="http://www.webeijing.cn/index.html" class="top">首 页</a> -<a 
+href="http://www.webeijing.cn/notice.asp" class="black">资讯动态</a></td>
+      </tr>
+      <tr><td bgcolor="#4d9dce" height="2"></td></tr>
+      <tr><td height="10"></td></tr>
+      <tr>
+        <td><img src="ncontent.asp_files/tncontent.gif" height="31" 
+width="168"></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top"><table class="black" border="0" 
+cellpadding="0" cellspacing="5" width="740">
+          <tbody><tr>
+            <td align="center" valign="top"><table class="black" 
+bgcolor="#dfdfdf" border="0" cellpadding="5" cellspacing="1" width="720">
+              <tbody><tr>
+                <td align="center" bgcolor="#ffffff" valign="top" 
+width="154"><img src="ncontent.asp_files/tnewsad.jpg" height="78" 
+width="154"></td>
+                <td align="left" bgcolor="#ffffff" valign="top" 
+width="543"><table class="content" border="0" cellpadding="0" 
+cellspacing="0" width="540">
+                  <tbody><tr>
+                    <td 
+background="ncontent.asp_files/beautyback_title01.htm" height="36"><table
+ class="table" border="0" cellpadding="0" cellspacing="0" height="36">
+                        <tbody><tr>
+                          <td width="10">&nbsp;</td>
+                          <td width="439"><b>招聘销售人员</b></td>
+                        </tr>
+                    </tbody></table></td>
+                  </tr>
+                  <tr>
+                    <td align="center" height="10"><table class="table" 
+border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                          <td width="530"><table class="black" 
+border="0" cellpadding="5" cellspacing="0" width="530">
+                            <tbody><tr>
+                              <td class="content" width="351"><div> <div>本
+公司因拓展业务需要，现招聘销售人员若干。</div> <div>&nbsp;</div> <div>要求如下：</div> <div>1、从事电
+话业务半年以上，有一定的销售经验吃苦耐劳，勤奋敬业，热爱销售工作，能够承受较强的工作压力，勇于挑战高薪。<br>2、性格开朗，自信大方；良好的沟
+通和表达能力，较好的亲和力，具有团队合作精神 </div> <div>3、掌握一定的互联网知识，了解网站的运作规律，有网站推广业务经验者优先；</div>
+ <div>4、普通话较好。</div></div></td>
+                            </tr>
+                          </tbody></table></td>
+                        </tr>
+                        
+                    </tbody></table></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><table class="table" border="0" 
+cellpadding="0" cellspacing="0" height="35" width="530">
+                        <tbody><tr>
+                          <td align="right"><img 
+src="ncontent.asp_files/printer.gif" align="absmiddle" height="14" 
+width="16"> <a href="javascript:window.print()" class="black">打印本页</a> |
+ <img src="ncontent.asp_files/close.gif" align="absmiddle" height="14" 
+width="14"> <a href="javascript:window.close()" class="black">关闭窗口</a></td>
+                        </tr>
+                    </tbody></table></td>
+                  </tr>
+                </tbody></table></td>
+              </tr>
+            </tbody></table>
+              </td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table></td>
+    <td>&nbsp;</td></tr></tbody></table>
+	
+<table class="blink" border="0" cellpadding="0" cellspacing="0" 
+width="1004">
+  <tbody>
+  <tr>
+    <td width="6"></td>
+    <td width="25"></td>
+    <td colspan="2" height="12"></td></tr>
+  <tr>
+    <td width="6"></td>
+    <td width="25"></td>
+    <td colspan="2" bgcolor="#dbdbdb" height="4"></td></tr>
+  <tr>
+    <td width="6">&nbsp;</td>
+    <td width="25">&nbsp;</td>
+    <td colspan="2" height="26">&nbsp;| &nbsp;<a 
+href="http://www.webeijing.cn/about.html" class="blink">关于我们</a>&nbsp; 
+|&nbsp; <a href="http://www.webeijing.cn/payment.html" class="blink">汇款方
+式</a>&nbsp; 
+      |&nbsp; <a href="http://www.webeijing.cn/online.html" 
+class="blink">在线服务</a>&nbsp; |&nbsp; <a 
+href="http://www.webeijing.cn/server.html" class="blink">服务体系</a>&nbsp; 
+|&nbsp; <a href="http://www.webeijing.cn/contact.html" class="blink">联系我
+们</a>&nbsp; |&nbsp; 
+      <a href="http://www.webeijing.cn/sitemap.html" class="blink">网站地图</a>&nbsp;
+ |&nbsp; <a href="http://www.webeijing.cn/link.htm" class="blink">友情链接</a>&nbsp;
+ |</td>
+  </tr>
+  <tr>
+    <td width="6"></td>
+    <td width="25"></td>
+    <td colspan="2" bgcolor="#dbdbdb" height="1"></td></tr>
+  <tr>
+    <td width="6">&nbsp;</td>
+    <td width="25">&nbsp;</td>
+    <td class="bottom" align="right" height="50" width="960">北京海博创天科技发展有
+限公司 
+      版权所有<br>
+      &#169;&nbsp;2006-2008</td>
+    <td class="bottom" align="right" width="18"></td></tr></tbody></table></body></html>
